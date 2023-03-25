@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
+    [Header("Unchangeable objects")]
   [SerializeField] private Transform gameTransform;
   [SerializeField] private Transform winPannel;
+    [Header("Changeable Objects")]
   [SerializeField] private Transform piecePrefab;
+  [SerializeField] private int size;
 
-  private List<Transform> pieces;
+    private List<Transform> pieces;
   private int emptyLocation;
-  [SerializeField]private int size;
   private bool shuffling = false;
 
   // Create the game setup with size x size pieces.
